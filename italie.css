@@ -67,3 +67,27 @@
 	margin-bottom: 0.5em;
 	color: #333;
 }
+
+.examples-img {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 3em;
+}
+
+.examples-img figure {
+	flex: 1 1 45%;
+	text-align: center;
+	max-width: 45vw;
+}
+
+.examples-img figcaption {
+	font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1.5em;
+	color: #333;
+}
+
+.examples-img img {
+	width: 100%;
+}
