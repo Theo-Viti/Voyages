@@ -1,0 +1,69 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* header begin */
+
+.hero {
+	height: 100vh;
+	width: 100%;
+	background-image: url('Assets/img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: white;
+	text-align: center;
+}
+
+.hero-content {
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%); /* Centre parfaitement par rapport
+	à un parent*/
+	padding: 2em;
+	background-color: rgba(37, 32, 32, 0.603);
+}
+
+/* header end */
+
+/* main begin */
+
+.why-italy {
+	background-image: url(Assets/img/bg.png);
+	padding: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em;
+	width: 100vw;
+}
+
+.why-italy h2 {
+	width: 100%;
+	color: white;
+	text-align: center;
+	font-size: 2.5em;
+	margin: 1em 0;
+	padding: 1em;
+	background-color: rgba(37, 32, 32, 0.603);
+}
+
+.why-italy article {
+	font-family: poppins, sans-serif;
+	text-align: center;
+	flex: 1 1 45%;
+	max-width: 600px;
+	background-color: rgba(255, 255, 255, 0.555);
+	border-radius: 15px;
+	padding: 1em;
+	margin: 1em;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.why-italy article h3 {
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+	color: #333;
+}
