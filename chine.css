@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -58,7 +62,7 @@ input[type="radio"] {
   border-radius: 15px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; /* MODIFIE ICI */
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,24 +72,24 @@ input[type="radio"] {
   pointer-events: none;
   transition: opacity 0.7s ease-in-out;
   flex-direction: column;
-  background-color: #000; /* Pour que l’espace vide soit noir et pas blanc */
+  background-color: #000;
 }
 
 /* Background images for slides */
 .slide1 {
-  background-image: url('img/background-slide1.jpg');
+  background-image: url('img/chine-background-slide1.jpg');
   width: 100%;
   height: 100%;
 }
 
 .slide2 {
-  background-image: url('img/background-slide2.jpg');
+  background-image: url('img/chine-background-slide2.jpg');
   width: 100%;
   height: 100%;
 }
 
 .slide3 {
-  background-image: url('img/background-slide3.jpg');
+  background-image: url('img/chine-background-slide3.jpg');
   width: 100%;
   height: 100%;
 }
@@ -173,8 +177,8 @@ input[type="radio"] {
   max-width: 900px;
   margin: 40px auto;
   display: flex;
-  flex-wrap: wrap; /* ✅ Wrap sur petits écrans */
-  gap: 20px;        /* ✅ Réduit le gap */
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
   padding: 0 20px;
 }
@@ -183,11 +187,11 @@ input[type="radio"] {
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  flex: 1 1 150px;         /* ✅ Responsive width */
-  max-width: 200px;        /* ✅ Empêche de trop s’étendre */
+  flex: 1 1 150px;         /* Responsive width */
+  max-width: 200px;
   height: 140px;
   display: flex;
-  flex-direction: column;  /* ✅ Plus clair que flex-flow: column wrap */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: default;
@@ -209,7 +213,7 @@ input[type="radio"] {
 }
 
 .number img {
-  width: 100px; /* Plus petit pour petits écrans */
+  width: 100px;
   max-width: 100%;
   height: auto;
 }
@@ -287,13 +291,13 @@ input[type="radio"] {
 
 /* Tourism cards backgrounds */
 .card1 {
-  background-image: url('img/background-card1.jpg');
+  background-image: url('img/chine-background-card1.jpg');
 }
 
 .card2 {
-  background-image: url('img/background-card2.jpg');
+  background-image: url('img/chine-background-card2.jpg');
 }
 
 .card3 {
-  background-image: url('img/background-card3.webp');
+  background-image: url('img/chine-background-card3.webp');
 }
