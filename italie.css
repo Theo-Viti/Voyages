@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+html,
+body {
+	overflow-x: hidden;
 }
 
 /* header begin */
@@ -9,7 +16,7 @@
 .hero {
 	height: 100vh;
 	width: 100%;
-	background-image: url('Assets/img/bg.jpg');
+	background-image: url('assets/img/italie/bg.jpg');
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -30,7 +37,7 @@
 
 .why-italy {
 	padding-top: 0em;
-	background-image: url(Assets/img/bg.png);
+	background-image: url('assets/img/italie/bg.png');
 	padding: 2em;
 	display: flex;
 	flex-wrap: wrap;
@@ -113,15 +120,114 @@
 
 /* footer begin */
 footer {
-	background-color: rgba(81, 77, 77, 0.603);
 	color: white;
 	text-align: center;
 	width: 100%;
+	background-color: black;
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 footer img {
 	width: 50px;
 	height: auto;
+}
+
+footer nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.menus-nav {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	margin: 0;
+	padding: 0;
+}
+
+.logo-header-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.logo-header {
+	width: 5vh;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-toggle {
+	display: block;
+	padding: 0.8rem 1.5rem;
+	text-decoration: none;
+	color: black;
+	background-color: whitesmoke;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+.dropdown-toggle:hover {
+	background-color: yellow;
+	transform: translateY(-2px);
+}
+
+.dropdown-menu {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	min-width: 200px;
+	background-color: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	list-style: none;
+	margin: 0;
+	padding: 0.5rem 0;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px);
+	transition: all 0.3s ease;
+	z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.dropdown-menu li {
+	margin: 0;
+}
+
+.dropdown-menu a {
+	display: block;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+	color: #333;
+	transition: all 0.3s ease;
+	font-weight: 400;
+}
+
+.dropdown-menu a:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	color: #000;
+	padding-left: 2rem;
+}
+
+ul:first-child {
+	list-style: none;
 }
 
 /* footer end */
