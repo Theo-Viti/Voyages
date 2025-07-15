@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  color: #222;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  color: black;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+}
+
+/* Hero Carousel */
+.hero {
+  position: relative;
+  height: 560px;
+  border-radius: 15px;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgb(0 0 0 / 0.6);
+  color: white;
+  font-weight: 700;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slide styling */
+.slide {
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease-in-out;
+  flex-direction: column;
+  background-color: #000;
+}
+
+/* Background images for slides */
+.slide1 {
+  background-image: url('Assets/img/chine-background-slide1.jpg');
+  width: 100%;
+  height: 100%;
+}
+
+.slide2 {
+  background-image: url('Assets/img/chine-background-slide2.jpg');
+  width: 100%;
+  height: 100%;
+}
+
+.slide3 {
+  background-image: url('Assets/img/chine-background-slide3.jpg');
+  width: 100%;
+  height: 100%;
+}
+
+/* Overlay for readability */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  border-radius: 15px;
+  z-index: 1;
+}
+
+/* Text content */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-weight: 700;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.slide-content h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.slide-content p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0.85;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+/* Show active slide */
+#slide1:checked ~ .slides .slide1,
+#slide2:checked ~ .slides .slide2,
+#slide3:checked ~ .slides .slide3 {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Pagination dots */
+.pagination {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 3;
+}
+
+.pagination label {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  background: rgba(255 255 255 / 0.5);
+  border-radius: 50%;
+  display: block;
+  transition: background 0.3s ease;
+  border: 2px solid white;
+}
+
+#slide1:checked ~ .pagination label[for="slide1"],
+#slide2:checked ~ .pagination label[for="slide2"],
+#slide3:checked ~ .pagination label[for="slide3"] {
+  background: white;
+}
+
+.info-cards {
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.info-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  flex: 1 1 150px;         /* Responsive width */
+  max-width: 200px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.number {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1;
+  text-align: center;
+}
+
+.number img {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+  line-height: 1.3;
+}
+
+
+/* Tourism section */
+.tourism {
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
+.tourism h3 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.tourism p {
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.tourism-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tourism-card {
+  position: relative;
+  flex: 1 1 300px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 0.3);
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.tourism-card:hover {
+  transform: scale(1.05);
+}
+
+.tourism-card-info {
+  z-index: 2;
+}
+
+.tourism-card small {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.tourism-card span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Tourism cards backgrounds */
+.card1 {
+  background-image: url('Assets/img/chine-background-card1.jpg');
+}
+
+.card2 {
+  background-image: url('Assets/img/chine-background-card2.jpg');
+}
+
+.card3 {
+  background-image: url('Assets/img/chine-background-card3.webp');
+}
