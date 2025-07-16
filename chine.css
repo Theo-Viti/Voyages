@@ -107,6 +107,9 @@ nav {
 	padding-left: 2rem;
 }
 
+header ul{
+	list-style: none;
+}
 
 header {
 	display: flex;
