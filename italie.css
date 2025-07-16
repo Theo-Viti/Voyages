@@ -67,7 +67,7 @@ header nav {
 
 .dropdown-menu {
 	position: absolute;
-	top 100%;
+	top: 100%;
 	left: 0;
 	min-width: 200px;
 	background-color: rgba(255, 255, 255, 0.95);
