@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+/* header begin */
+
+/* header nav begin */
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 1rem 3rem;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+}
+
+
+.menus-nav {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	margin: 0;
+	padding: 0;
+}
+
+.logo-header-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.logo-header {
+	width: 5vh;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-toggle {
+	display: block;
+	padding: 0.8rem 1.5rem;
+	text-decoration: none;
+	color: black;
+	background-color: whitesmoke;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+.dropdown-toggle:hover {
+	background-color: yellow;
+	transform: translateY(-2px);
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 200px;
+	background-color: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	list-style: none;
+	margin: 0;
+	padding: 0.5rem 0;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px);
+	transition: all 0.3s ease;
+	z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.dropdown-menu li {
+	margin: 0;
+}
+
+.dropdown-menu a {
+	display: block;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+	color: #333;
+	transition: all 0.3s ease;
+	font-weight: 400;
+}
+
+.dropdown-menu a:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	color: #000;
+	padding-left: 2rem;
+}
+
+ul:first-child {
+	list-style: none;
+}
+
+/* header nav end */
+
+.hero {
+	height: 100vh;
+	width: 100%;
+	background-image: url('assets/img/italie/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: white;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-content {
+	padding: 2em;
+	background-color: rgba(19, 17, 17, 0.795);
+}
+
+/* header end */
+
+/* main begin */
+
+.why-italy {
+	padding-top: 0em;
+	background-image: url('assets/img/italie/bg.png');
+	padding: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em;
+	width: 100%;
+	background-size: cover;
+}
+
+.why-italy h2 {
+	width: 100%;
+	color: white;
+	text-align: center;
+	font-size: 2.5em;
+	margin: 1em 0;
+	padding: 1em;
+	background-color: rgba(37, 32, 32, 0.603);
+}
+
+.why-italy article {
+	font-family: poppins, sans-serif;
+	text-align: center;
+	flex: 1 1 45%;
+	max-width: 600px;
+	background-color: rgba(255, 255, 255, 0.555);
+	border-radius: 15px;
+	padding: 1em;
+	margin: 1em;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.why-italy article h3 {
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+	color: #333;
+}
+
+.why-italy-bis {
+	background-color: rgba(216, 225, 229, 0.676);
+	font-family: Poppins, sans-serif;
+	font-size: 2em;
+	text-align: center;
+	padding: 2em;
+}
+
+.why-italy-bis h2 {
+	font-size: 1em;
+}
+
+.why-italy-bis p {
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+.examples-img {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 3em;
+}
+
+.examples-img figure {
+	flex: 1 1 45%;
+	text-align: center;
+	max-width: 45vw;
+}
+
+.examples-img figcaption {
+	font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1.5em;
+	color: #333;
+}
+
+.examples-img img {
+	width: 100%;
+}
+
+/* main end */
+
+/* footer begin */
+footer {
+	color: white;
+	text-align: center;
+	width: 100%;
+	background-color: black;
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+footer img {
+	width: 50px;
+	height: auto;
+}
+
+
+
+/* footer end */
