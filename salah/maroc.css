@@ -1,31 +1,15 @@
-/* ASIDE  */
-
-/* aside {
-  width: 30%;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  float: right;
-  box-shadow: inset 5px 0 5px -5px #1f4b60;
-  color: #29627e;
-  background-color: rgb(218, 233, 249);
-  margin-right: 0%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-aside > p {
-  margin: 0.85rem;
-  font-size: large;
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
-
-aside > h2 {
-    justify-content: center;
-    margin-left: 40px;
-}
-aside  a {
-    text-decoration: none;
-    margin: 0.85rem;
-    font-size: large;
-    color: #29627e;
-} */
 
 body {
     margin: 0;
@@ -52,6 +36,21 @@ header h1 {
     color: #000;
 }
 
+h2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container , .app-card , h2 {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -68,6 +67,9 @@ header h1 {
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 15px #00f6ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .app-card img {
@@ -85,11 +87,13 @@ header h1 {
 .app-card p {
     margin: 15px;
     line-height: 1.4;
+    display: flex;
+    justify-content: space-around;
 }
 
 .neon-button {
     position: relative;
-    display: block;
+    display: flex;
     margin: 20px auto 30px;
     padding: 15px 30px;
     color: #00eaff;
@@ -106,6 +110,9 @@ header h1 {
         0 0 10px #00eaff,
         inset 0 0 10px #00eaff;
     text-shadow: 0 0 8px rgba(0, 234, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .neon-button:hover {
@@ -155,6 +162,11 @@ header h1 {
     animation: slide4 1s linear infinite .75s;
 }
 
+/* .neon-button {
+    display: flex;
+    flex-direction: row;
+} */
+
 @keyframes slide1 {
     0% {
         left: -100%
@@ -199,13 +211,149 @@ header h1 {
     }
 }
 
-footer {
+/* footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
     color: #777;
-}
+} */
 
 .app-card img {
     height: 200px;
+}
+
+/* NAV JUSTIN  */
+
+.menus-nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-header-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.logo-header {
+    width: 12vh;
+    height: 10vh;
+}
+
+.title {
+    font-size: 2rem;
+    padding-left: 8px;
+    padding-top: 8px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: black;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.dropdown-toggle:hover {
+    background-color: yellow;
+    transform: translateY(-2px);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+    padding-left: 2rem;
+}
+
+/* Styles pour le header */
+header {
+    background-color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+header h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer {
+    background-color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: auto;
 }
